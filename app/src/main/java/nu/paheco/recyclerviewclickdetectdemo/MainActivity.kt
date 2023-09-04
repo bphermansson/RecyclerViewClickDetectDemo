@@ -8,7 +8,6 @@ import nu.paheco.recyclerviewclickdetectdemo.databinding.ActivityMainBinding
 class MainActivity : Activity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: PersonAdapter
-    //var personadapter = PersonAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,16 +15,10 @@ class MainActivity : Activity() {
         setContentView(binding.root)
 
         adapter = PersonAdapter(PersonAdapter.OnClickListener {
-            it ->
-            Toast.makeText(applicationContext, it, Toast.LENGTH_SHORT).show()
+            name ->
+            Toast.makeText(applicationContext, name, Toast.LENGTH_SHORT).show()
         })
-        var people = mutableListOf<String>("Arne", "Bertil", "Ceasar", "David")
-
-
-        //val list = meme.data?.memes
-        //adapter.submitList(people)
         binding.recyclerView.adapter = adapter
-
     }
 }
 
