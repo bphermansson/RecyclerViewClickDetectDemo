@@ -18,6 +18,8 @@ class MainActivity : Activity() {
             name ->
             Toast.makeText(applicationContext, name, Toast.LENGTH_SHORT).show()
         })
+
+        adapter.people.add("Per Persson")
         binding.recyclerView.adapter = adapter
     }
 }

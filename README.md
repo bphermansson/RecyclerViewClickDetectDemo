@@ -1,0 +1,1 @@
+This project demos a recyclerView with onClick enabled. That is, if you click an item in the list a toast is shown containing the text in the clicked item.  
